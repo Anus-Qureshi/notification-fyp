@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import ReactNotification from "react-notifications-component";
+import "react-notifications-component/dist/theme.css";
+import { store } from "react-notifications-component";
+import "animate.css";
+import Home from "./Component/home"
 
 function App() {
+
+  const a = prompt("Enter the vale of a")
+  if (a == 45 ) 
+  {
+    console.log("if condition is true");
+  }
+  else {
+    console.log("a is not equal to 45")
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      This is my Application
+      <ReactNotification />
+      <Home />
     </div>
   );
 }
